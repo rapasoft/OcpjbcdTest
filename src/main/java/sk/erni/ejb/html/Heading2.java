@@ -1,7 +1,6 @@
 package sk.erni.ejb.html;
 
 import org.jsoup.nodes.Element;
-import sk.erni.ejb.parser.HtmlConstants;
 
 /**
  * @author rap
@@ -13,9 +12,9 @@ public class Heading2 extends HtmlElement {
 	}
 
 	@Override
-	public HtmlConstants getTag() {
-		return HtmlConstants.H2;
-	}
+    public String getTag() {
+        return HtmlConstants.H2.toString();
+    }
 
 	@Override
 	public String getData() {

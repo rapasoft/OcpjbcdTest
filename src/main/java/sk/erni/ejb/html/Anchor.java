@@ -1,7 +1,6 @@
 package sk.erni.ejb.html;
 
 import org.jsoup.nodes.Element;
-import sk.erni.ejb.parser.HtmlConstants;
 
 /**
  * @author rap
@@ -15,13 +14,17 @@ public class Anchor extends HtmlElement {
 	}
 
 	@Override
-	public HtmlConstants getTag() {
-		return HtmlConstants.A;
-	}
+    public String getTag() {
+        return HtmlConstants.A.toString();
+    }
 
 	@Override
 	public String getData() {
 		return getUnderliningElement().attr(HREF);
 	}
 
+    @Override
+    public String toString() {
+        return getData();
+    }
 }

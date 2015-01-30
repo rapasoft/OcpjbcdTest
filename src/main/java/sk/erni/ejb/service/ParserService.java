@@ -11,6 +11,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.logging.Logger;
 
 /**
@@ -19,26 +20,26 @@ import java.util.logging.Logger;
 @Stateless
 public class ParserService {
 
-	@Inject
-	private DomParser domParser;
+    @Inject
+    private DomParser domParser;
 
-	@Inject
-	@Log(forClass = ParserService.class)
-	private Logger logger;
+    @Inject
+    @Log(forClass = ParserService.class)
+    private Logger logger;
 
-	public List<Anchor> parseAnchors(String url) {
-		Document document = domParser.readDocument(url);
-		return domParser.parseAnchors(document);
-	}
+    public List<Anchor> parseAnchors(String url) {
+        Document document = domParser.readDocument(url);
+        return domParser.parseAnchors(document);
+    }
 
-	public Map<String, List<Anchor>> parseAnchorsGroup(String url) {
-		Document document = domParser.readDocument(url);
-		return domParser.parseAnchorsGroup(document);
-	}
+    public Map<String, Set<Anchor>> parseAnchorsGroupByCssClass(String url) {
+        Document document = domParser.readDocument(url);
+        return domParser.parseAnchorsGroupByCssClass(document);
+    }
 
-	public List<Heading2> parseHeading2(String url) {
-		Document document = domParser.readDocument(url);
-		return domParser.parseHeading2(document);
-	}
+    public List<Heading2> parseHeading2(String url) {
+        Document document = domParser.readDocument(url);
+        return domParser.parseHeading2(document);
+    }
 
 }

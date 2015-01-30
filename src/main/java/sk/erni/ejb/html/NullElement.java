@@ -1,7 +1,6 @@
 package sk.erni.ejb.html;
 
 import org.jsoup.nodes.Element;
-import sk.erni.ejb.parser.HtmlConstants;
 
 /**
  * @author rap
@@ -12,9 +11,9 @@ public class NullElement extends HtmlElement {
 	}
 
 	@Override
-	public HtmlConstants getTag() {
-		return HtmlConstants.EMPTY;
-	}
+    public String getTag() {
+        return HtmlConstants.EMPTY.toString();
+    }
 
 	@Override
 	public String getData() {

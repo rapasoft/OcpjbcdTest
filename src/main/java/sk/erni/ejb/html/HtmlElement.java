@@ -1,7 +1,6 @@
 package sk.erni.ejb.html;
 
 import org.jsoup.nodes.Element;
-import sk.erni.ejb.parser.HtmlConstants;
 
 import java.util.Set;
 
@@ -16,7 +15,7 @@ public abstract class HtmlElement {
 		this.element = element;
 	}
 
-	public abstract HtmlConstants getTag();
+    public abstract String getTag();
 
 	public abstract String getData();
 

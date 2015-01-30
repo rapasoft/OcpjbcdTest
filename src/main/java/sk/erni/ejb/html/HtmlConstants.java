@@ -1,4 +1,4 @@
-package sk.erni.ejb.parser;
+package sk.erni.ejb.html;
 
 /**
  * @author rap

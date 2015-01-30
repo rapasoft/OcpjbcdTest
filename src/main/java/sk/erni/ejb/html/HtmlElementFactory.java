@@ -1,7 +1,6 @@
 package sk.erni.ejb.html;
 
 import org.jsoup.nodes.Element;
-import sk.erni.ejb.parser.HtmlConstants;
 
 /**
  * @author rap
